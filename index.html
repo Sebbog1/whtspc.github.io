@@ -668,12 +668,13 @@
 				document.getElementById('lin').addEventListener('animationend', this.arewethere)
 
 				if ( e.target.classList.contains('falser')){
+					play(document.getElementById("pakala.mp3"))
 					this.setState(
 						{shakeClass: 'shaker'}
 					)
 				}
 				else{
-	
+					play(document.getElementById(JSON.stringify(words[this.state.linjaIndex].meaning)+".mp3"))
 					this.setState(
 						{transClassLinjas: 'translinjas', transClassAns: 'transanswers'}
 					)
